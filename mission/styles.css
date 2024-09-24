@@ -47,8 +47,8 @@ main p {
 }
 
 .mission-list {
-    list-style-type: decimal; /* Ensure list numbers appear */
-    padding-left: 20px; /* Add some indentation for numbers */
+    list-style-type: decimal; 
+    padding-left: 20px; 
 }
 
 .mission-list li {
