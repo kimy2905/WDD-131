@@ -3,14 +3,12 @@ body {
     font-family: "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
 .wrapper {
     max-width: 600px;
     margin: 0 auto;
     padding: 200px;
-    background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -70,4 +68,11 @@ footer {
     font-style: italic;
 }
 
-    
+.dark h2 {
+    color: #5ba2d2;
+    }
+
+.dark{
+    background-color: #333;
+    color: white;
+}
