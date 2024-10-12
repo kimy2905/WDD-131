@@ -10,10 +10,16 @@
     <script src="coolpics.js" defer></script>
 </head>
 <body>
+    <div class="viewer hide" id="viewer">
+        <button class="close-viewer" id="close-viewer">X</button>
+        <img src="" alt="Large view" id="viewer-image">
+    </div>
+
     <header>
         <h1>Cool Pics 📷</h1>
         <nav>
-            <ul>
+            <button id="menu-button">Menu</button>
+            <ul class="menu hide">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">People</a></li>
                 <li><a href="#">Place</a></li>
@@ -24,34 +30,34 @@
     </header>
 
     <main>
-        <h2>Current work</h2>
+        <h2>Current Work</h2>
         <section class="gallery">
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 1">
+                <img src="norris-sm.jpeg" alt="Picture 1">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 2">
+                <img src="norris-sm.jpeg" alt="Picture 2">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 3">
+                <img src="norris-sm.jpeg" alt="Picture 3">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 4">
+                <img src="norris-sm.jpeg" alt="Picture 4">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 5">
+                <img src="norris-sm.jpeg" alt="Picture 5">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 6">
+                <img src="norris-sm.jpeg" alt="Picture 6">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 7">
+                <img src="norris-sm.jpeg" alt="Picture 7">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 8">
+                <img src="norris-sm.jpeg" alt="Picture 8">
             </figure>
             <figure>
-                <img src="norris-sm.jpeg" alt="picture 9">
+                <img src="norris-sm.jpeg" alt="Picture 9">
             </figure>
         </section>
     </main>
@@ -61,4 +67,3 @@
     </footer>
 </body>
 </html>
-<a href="coolpics/index.html">CoolPics</a>
