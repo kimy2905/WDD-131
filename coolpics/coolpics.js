@@ -11,7 +11,7 @@ function viewerTemplate(pic, alt) {
   
     if (clickedElement.tagName === "IMG") {
       const srcParts = clickedElement.src.split("$");
-      const newSrc = `${srcParts[0]}-full.jpeg`;
+      const newSrc = `${srcParts[0]}$full.jpeg`;
       const modalHTML = viewerTemplate(newSrc, clickedElement.alt);
       document.body.insertAdjacentHTML("afterbegin", modalHTML);
   
