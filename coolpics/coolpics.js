@@ -35,4 +35,8 @@ function viewerTemplate(pic, alt) {
   }
   
   document.querySelector(".gallery").addEventListener("click", viewHandler);
+  function toggleMenu(){
+  document.querySelector(".menu").classList.toggle("show")
+  }
+  document.querySelector("#menu-button").addEventListener("click", toggleMenu);
   

@@ -78,9 +78,6 @@ nav ul li a {
     display: none;
 }
 
-.hide {
-    display: none;
-}
 
 .gallery {
     display: grid;
@@ -149,11 +146,10 @@ nav ul li a {
 
     nav ul {
         display: none;
+        flex-direction:column;
+        gap:10px;
     }
 
-    nav ul.menu {
-        display: block;
-    }
 
     .gallery {
         grid-template-columns: 1fr;
@@ -161,7 +157,7 @@ nav ul li a {
 }
 
 @media (min-width: 700px) {
-    nav ul.menu {
+    nav ul {
         display: inline-block;
     }
 
@@ -192,4 +188,12 @@ nav ul li a {
     .viewer img {
         max-width: 80%;
     }
+}
+
+.show {
+    display: flex;
+    justify-content: center;
+    /* /horizontal */
+    align-items:center;
+    /* /vertical */
 }
