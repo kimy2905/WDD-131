@@ -9,7 +9,7 @@ const articles = [
         imgAlt: 'Book cover for Septimus Heap 1',
         ages: '10-14',
         genre: 'Fantasy',
-        stars: '★★★★'
+        stars: '⭐⭐⭐⭐'
     },
     {
         id: 2,
@@ -31,7 +31,8 @@ articles.forEach(article => {
     const articleElement = document.createElement('article');
     articleElement.innerHTML = `
         <div class="article-details-box">
-            <span>Date: ${article.date}</span>
+            <span>${article.date}</span>
+            <span>Ages: ${article.ages}</span>
             <span>Genre: ${article.genre}</span>
             <span>Rating: ${article.stars}</span>
         </div>

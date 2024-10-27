@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +27,7 @@ nav ul {
     list-style: none;
     gap: 15px;
     padding: 10px;
-    outline: 2px solid #e1b95a; /* Blue outline */
+    outline: 2px solid #e1b95a;
 }
 
 nav a {
@@ -75,13 +74,29 @@ article div:nth-child(2) {
 .article-details-box {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+    align-items: flex-end;
+    margin-left:auto;
+    border-right: 2px solid #e1b95a,
 }
 
 .article-details-box span {
     font-size: 0.9rem;
     color: #555;
+    text-align:right;
+    width:auto;
+    padding-left:20px;
 }
+
+.article-details-box span.article-date {
+    font-size: 1.2rem !important; 
+}
+
+.article-details-box span:first-child {
+    font-size: 1.2rem; 
+    color: #555;
+}
+
 
 .article-content {
     display: flex;
