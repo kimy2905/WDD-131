@@ -10,7 +10,7 @@ document.getElementById("add").addEventListener("click", function() {
     participantSection.innerHTML = `
       <p>Participant ${participantCount}</p>
       <div class="item">
-        <label for="fname${participantCount}">First name<span>*</span></label>
+        <label for="fname${participantCount}">First Name<span>*</span></label>
         <input type="text" name="fname${participantCount}" required>
       </div>
       <div class="item">
