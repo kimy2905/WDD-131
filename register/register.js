@@ -1,50 +1,62 @@
-
-document.getElementById("add").addEventListener("click", function() {
-
-    const participantCount = document.querySelectorAll('.participant').length + 1;
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.querySelector('form');
+  const addParticipantButton = document.getElementById('add');
+  const summarySection = document.getElementById('summary');
+  const participantsContainer = form.querySelector('.participants'); 
   
+  summarySection.style.display = 'none';
 
-    const participantSection = document.createElement("section");
-    participantSection.classList.add("participant");
-    
-    participantSection.innerHTML = `
-      <p>Participant ${participantCount}</p>
-      <div class="item">
-        <label for="fname${participantCount}">First Name<span>*</span></label>
-        <input type="text" name="fname${participantCount}" required>
-      </div>
-      <div class="item">
-        <label for="activity${participantCount}">Activity #<span>*</span></label>
-        <input type="text" name="activity${participantCount}" required>
-      </div>
-      <div class="item">
-        <label for="fee${participantCount}">Fee ($)<span>*</span></label>
-        <input type="number" name="fee${participantCount}" required>
-      </div>
-      <div class="item">
-        <label for="date${participantCount}">Desired Date <span>*</span></label>
-        <input type="date" name="date${participantCount}" required>
-      </div>
-      <div class="item">
-        <label for="grade${participantCount}">Grade</label>
-        <select name="grade${participantCount}">
-          <option value="1">1st</option>
-          <option value="2">2nd</option>
-          <option value="3">3rd</option>
-          <option value="4">4th</option>
-          <option value="5">5th</option>
-          <option value="6">6th</option>
-          <option value="7">7th</option>
-          <option value="8">8th</option>
-          <option value="9">9th</option>
-          <option value="10">10th</option>
-          <option value="11">11th</option>
-          <option value="12">12th</option>
-        </select>
-      </div>
-    `;
-    
-    
-    document.querySelector("fieldset.participants").appendChild(participantSection);
+  form.addEventListener('submit', function (e) {
+      e.preventDefault(); 
+
+      let totalFee = 0;
+      let adultName = document.getElementById('adult_name').value; 
+
+      const feeInputs = document.querySelectorAll('input[name^="fee"]');
+      feeInputs.forEach(input => {
+          totalFee += parseFloat(input.value) || 0;
+      });
+
+      form.style.display = 'none';
+
+      summarySection.innerHTML = `
+          <h2>Summary</h2>
+          <p><strong>Adult Name:</strong> ${adultName}</p>
+          <p><strong>Total Fee:</strong> $${totalFee.toFixed(2)}</p>
+          <h3>Participants:</h3>
+          <ul>
+              ${getParticipantsSummary()}
+          </ul>
+      `;
+      summarySection.style.display = 'block'; 
   });
-  
+
+  function getParticipantsSummary() {
+      let participantSummary = '';
+      const participants = document.querySelectorAll('.participant'); 
+      participants.forEach((participant, index) => {
+          const fname = participant.querySelector('input[name^="fname"]').value;
+          const activity = participant.querySelector('input[name^="activity"]').value;
+          const fee = participant.querySelector('input[name^="fee"]').value;
+          const grade = participant.querySelector('select').value;
+
+          participantSummary += `
+              <li>
+                  <strong>Participant ${index + 1}:</strong>
+                  <p>Name: ${fname}</p>
+                  <p>Activity: ${activity}</p>
+                  <p>Fee: $${fee}</p>
+                  <p>Grade: ${grade}</p>
+              </li>
+          `;
+      });
+      return participantSummary;
+  }
+
+  addParticipantButton.addEventListener('click', function () {
+      const newParticipant = document.querySelector('.participant').cloneNode(true);
+      const participantCount = document.querySelectorAll('.participant').length + 1;
+      newParticipant.querySelector('p').textContent = `Participant ${participantCount}`;
+      participantsContainer.insertBefore(newParticipant, addParticipantButton);
+  });
+});

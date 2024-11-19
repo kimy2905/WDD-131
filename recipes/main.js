@@ -29,3 +29,4 @@ function createRecipeCard(recipe) {
 }
 
 recipes.forEach(createRecipeCard);
+
