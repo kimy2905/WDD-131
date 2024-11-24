@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Recipe Book</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
-    
-        <meta name="description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
-    
-        <meta property="og:title" content="My Recipe Book">
-        <meta property="og:type" content="website" />
-        <meta property="og:description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
-        <meta property="og:image" content="images/apple-crisp.jpg"> 
-        <meta property="og:url" content="https://www.example.com/recipe-book"> 
+    <meta name="description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
+    <meta property="og:title" content="My Recipe Book">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
+    <meta property="og:image" content="images/apple-crisp.jpg"> 
+    <meta property="og:url" content="https://www.example.com/recipe-book"> 
 
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="My Recipe Book">
-        <meta name="twitter:description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
-        <meta name="twitter:image" content="images/apple-crisp.jpg"> 
-    
-        <link rel="stylesheet" href="recipes.css">
-    </head>
-    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Recipe Book">
+    <meta name="twitter:description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
+    <meta name="twitter:image" content="images/apple-crisp.jpg"> 
+
+    <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
     <header>
@@ -36,59 +31,30 @@
     <main>
         <div class="search">
             <form>
-              <div class="search-bar">
-                <input type="text" id="search" placeholder="Search for recipes...">
-                <button type="submit">
-                  <img src="images/search.svg" alt="Search Icon">
-                </button>
-              </div>
-            </form>
-          </div>
-          
-        
-        <section class="recipes">
-            <article class="recipe">
-                <div class="recipe-content">
-                    <!-- Image container -->
-                    <div class="image-container">
-                        <img src="images/apple-crisp.jpg" alt="Apple Crisp">
-                    </div>
-
-                 
-                    <div class="recipe-details">
-                      
-                        <div class="tags">
-                            <span class="tag">Dessert</span>
-                            <span class="tag">Vegan</span>
-                        </div>
-             
-                        <h2>Apple Crisp</h2>
-
-                        <div class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                            <span aria-hidden="true" class="icon-star">⭐</span>
-                            <span aria-hidden="true" class="icon-star">⭐</span>
-                            <span aria-hidden="true" class="icon-star">⭐</span>
-                            <span aria-hidden="true" class="icon-star">⭐</span>
-                            <span aria-hidden="true" class="icon-star-empty">☆</span>
-                        </div>
-
-                        
-                        <p class="recipe-description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-                    </div>
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Search for recipes...">
+                    <button type="submit">
+                        <img src="images/search.svg" alt="Search Icon">
+                    </button>
                 </div>
-            </article>
+            </form>
+        </div>
+
+        <section id="recipe-container">
+           
         </section>
     </main>
-
+    
     <footer>
         <p><a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a></p>
         <div class="social">
-            
             <a href="#"><img src="images/instagram_icon.svg" alt="Instagram"></a>
             <a href="#"><img src="images/youtube_icon.svg" alt="YouTube"></a>
             <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest"></a>
         </div>
     </footer>
+
+    <script src="main.js" type="module"></script>
 </body>
 </html>
 
