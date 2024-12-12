@@ -26,7 +26,7 @@ navLinks.addEventListener("click", () => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-// ===== ScrollReveal animations for various sections =====
+// ===== ScrollReveal animations for many sections =====
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",

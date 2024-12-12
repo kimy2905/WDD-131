@@ -1,60 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Book</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-
-    <meta name="description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
-    <meta property="og:title" content="My Recipe Book">
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
-    <meta property="og:image" content="images/apple-crisp.jpg"> 
-    <meta property="og:url" content="https://www.example.com/recipe-book"> 
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Recipe Book">
-    <meta name="twitter:description" content="A collection of delicious and easy-to-make recipes for every occasion. Discover your next favorite dish.">
-    <meta name="twitter:image" content="images/apple-crisp.jpg"> 
-
-    <link rel="stylesheet" href="recipes.css">
-</head>
-<body>
-    <header>
-        <img src="images/recipe-book.png" alt="Recipe Book Logo" class="logo">
-        <h1>My Recipe Book</h1>
-    </header>
-
-    <main>
-        <div class="search">
-            <form>
-                <div class="search-bar">
-                    <input type="text" id="search" placeholder="Search for recipes...">
-                    <button type="submit">
-                        <img src="images/search.svg" alt="Search Icon">
-                    </button>
-                </div>
-            </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>SLAY | WDM</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__bar">
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">WDM</a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
         </div>
-
-        <section id="recipe-container">
-           
-        </section>
-    </main>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#experience">Experiences</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <header class="section__container header__container" id="home">
+      <div class="header__text">
+        <h1>Slay Nails</h1>
+        <p>
+          Skilled in the most modern techniques and can recommend the best options based on the condition of your nails and the finish you want to achieve. 
+          We always prioritize the care and preservation of your natural nails. ♥
+          You’ll find the best service and comfort to freely express yourself through the beauty of your hands.
+        </p>
+      </div>
+      <img src="images/nailslogo.jpeg" alt="header" />
+    </header>
+    
+    <section class="section__container project__container" id="project">
+      <h2>PROJECTS</h2>
+      
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+      </div>
+    
+      <div class="portfolio-wrapper">
+        <div class="portfolio-col">
+          <div class="portfolio-item design">
+            <img src="images/nails1.jpeg" alt="Design project" />
+          </div>
+          <div class="portfolio-item development">
+            <img src="images/nails2.jpeg" alt="Development project" />
+          </div>
+        </div>
+        <div class="portfolio-col">
+          <div class="portfolio-item development">
+            <img src="images/nails3.jpeg" alt="Development project" />
+          </div>
+          <div class="portfolio-item design">
+            <img src="images/nails4.jpeg" alt="Design project" />
+          </div>
+        </div>
+        <div class="portfolio-col">
+          <div class="portfolio-item development">
+            <img src="images/nails5.jpeg" alt="Development project" />
+          </div>
+          <div class="portfolio-item design">
+            <img src="images/nails6.jpeg" alt="Design project" />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section__container experience__container" id="experience">
+      <h2>EXPERIENCE</h2>
+      <ul class="experience__list">
+        <li>
+          <div class="experience__header">
+            <div>
+              <img src="assets/search.png" alt="google" />
+              <h4>Lead Software Engineer</h4>
+            </div>
+            <p>Nov 2022 - Present</p>
+          </div>
+          <p>
+            As a Lead Software Engineer at Google, I spearheaded innovative projects, mentored a team of talented engineers, and played a crucial role in developing scalable solutions.
+          </p>
+        </li>
+        <li>
+          <div class="experience__header">
+            <div>
+              <img src="assets/apple.png" alt="apple" />
+              <h4>Senior Software Engineer</h4>
+            </div>
+            <p>Apr 2020 - Nov 2022</p>
+          </div>
+          <p>
+            At Apple, I contributed to the development of high-performance applications, collaborating with cross-functional teams to deliver seamless and user-friendly products.
+          </p>
+        </li>
+        <li>
+          <div class="experience__header">
+            <div>
+              <img src="assets/meta.png" alt="meta" />
+              <h4>Junior Software Engineer</h4>
+            </div>
+            <p>Jan 2018 - Apr 2020</p>
+          </div>
+          <p>
+            During my tenure at Meta, I honed my skills in front-end and back-end development, working on diverse projects that improved platform functionality.
+          </p>
+        </li>
+      </ul>
+    </section>
     
     <footer>
-        <p><a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a></p>
-        <div class="social">
-            <a href="#"><img src="images/instagram_icon.svg" alt="Instagram"></a>
-            <a href="#"><img src="images/youtube_icon.svg" alt="YouTube"></a>
-            <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest"></a>
+      <div class="section__container footer__container" id="contact">
+        <h2>Contact</h2>
+        <p>
+          I'd love to hear from you! Whether you have a project in mind, a question about my work, or just want to connect, feel free to reach out.
+        </p>
+        <div class="mail__to">
+          <a href="#">
+            <span><i class="ri-mail-line"></i></span>
+            webdesignmastery23@gmail.com
+          </a>
         </div>
+        <ul class="footer__socials">
+          <li><a href="#"><i class="ri-google-fill"></i></a></li>
+          <li><a href="#"><i class="ri-twitter-x-fill"></i></a></li>
+          <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+        </ul>
+      </div>
     </footer>
 
-    <script src="main.js" type="module"></script>
-</body>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
 

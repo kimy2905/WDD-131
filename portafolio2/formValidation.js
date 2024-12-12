@@ -4,7 +4,7 @@ export function validateForm(form) {
     const inputs = form.querySelectorAll(".input");
     let isValid = true;
   
-    // Loop through all inputs to check if they are valid
+    // Looped through all inputs to check if they are valid
     inputs.forEach(input => {
       const parent = input.parentNode;
       if (input.value.trim() === "") {
