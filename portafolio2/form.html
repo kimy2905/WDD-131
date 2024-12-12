@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" type='module'  defer></script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- Same nav as in the home page-->
+  <nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="nav__logo">
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#experience">Customer Love</a></li>
+        <li><a href="form.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Form -->
+  <body>
+    <main>
+      <div class="form">
+          <h1 > Contact Us!</h1>
+          <div id="feedback">
+          </div>
+          <form>
+              <ul>
+              <li>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="user_name" />
+              </li>
+              <li>
+                  <label for="mail">Email:</label>
+                  <input type="email" id="mail" name="user_email" />
+              </li>
+              <li>
+                  <label for="msg">Message:</label>
+                  <textarea id="msg" name="user_message"></textarea>
+              </li>
+              <li class="button">
+                  <button type="submit">Send your message</button>
+              </li>
+              <div id="feedback"></div>
+              
+              </ul>
+          </form> 
+      </div>
+  </main>
